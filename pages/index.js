@@ -2,140 +2,224 @@ import Head from 'next/head'
 
 export default function Home() {
   return (
-    .mainHeader {
-  width:100%;
-  border: 1px outset black; 
-  text-align: left;
-}
+    <div className="container">
+      <Head>
+        <title>Resume</title>
+        <h1>Angelaine T. Delos Santos</h1>
+        <p>Computer Engineer</p>
+        <p> As a Computer Engineer my ultimate goal is to learn and and widen my knowledge.
+           My greatest strength is that I am adaptive and flexible. 
+           </p>
+      </Head>
 
-.sectionDiv {
-  display: -webkit-flex;
-  display: flex;
-  width:100%;
-  border: 1px outset black; 
-}
+      <main>
+        <div className="sectionDiv">
 
-rowColumn1 {
-  width:100%;
-  -ms-flex: 4;
-  flex: 4;
-  text-align: left;
+   
+          <rowColumn1>
+            <h3>Personal Information</h3>
+
+            <b>Address</b>
+              <p>Villa Sto. Domingo Mexico, Pampanga
+              <b>Phone</b>
+              09164572394
+              <b>Email</b>
+              angelainedelossantos@gmail.com</p>
+          </rowColumn1>
+          
+
+           <rowColumn2>
+            <h3>Experience</h3>
+             <p>2022 - IT Technical Support/Assistant
+                Department of Environment and Natural Resources
+               \n Region III, DMGC
+               \n•  Setting up of Desktop Computers and/or Laptops 
+               \n•  Reformatting
+               \n•  Setting up Network by crimping UTP cable 
+               \n•  Fixing time issues on devices by changing CMOS battery
+               \n•  System Inventory
+               </p>
+          </rowColumn2>
+        </div>
+
+        <div>
+          <a
+            href="https://github.com/vercel/next.js/tree/master/examples"
+            className="card"
+          >
+            <h3>Examples &rarr;</h3>
+            <p>Discover and deploy boilerplate example Next.js projects.</p>
+          </a>
+
+          <a
+            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            className="card"
+          >
+            <h3>Deploy &rarr;</h3>
+            <p>
+              Instantly deploy your Next.js site to a public URL with Vercel.
+            </p>
+          </a>
+        </div>
+      </main>
+
+      <footer>
+        <a
+          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Powered by{' '}
+          <img src="/vercel.svg" alt="Vercel" className="logo" />
+        </a>
+      </footer>
+
+      <style jsx>{`
+        .container {
+          min-height: 100vh;
+          padding: 0 0.5rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        main {
+          padding: 5rem 0;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        footer {
+          width: 100%;
+          height: 100px;
+          border-top: 1px solid #eaeaea;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        footer img {
+          margin-left: 0.5rem;
+        }
+
+        footer a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+
+        .title a {
+          color: #0070f3;
+          text-decoration: none;
+        }
+
+        .title a:hover,
+        .title a:focus,
+        .title a:active {
+          text-decoration: underline;
+        }
+
+        .title {
+          margin: 0;
+          line-height: 1.15;
+          font-size: 4rem;
+        }
+
+        .title,
+        .description {
+          text-align: center;
+        }
+
+        .description {
+          line-height: 1.5;
+          font-size: 1.5rem;
+        }
+
+        code {
+          background: #fafafa;
+          border-radius: 5px;
+          padding: 0.75rem;
+          font-size: 1.1rem;
+          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+        }
+
+        .grid {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+
+          max-width: 800px;
+          margin-top: 3rem;
+        }
+
+        .sectionDiv {
+          display: -webkit-flex;
+          display: flex;
+          width:100%;
+          border: 1px outset black; 
+        }
+
+        rowColumn1 {
+          width:100%;
+          -ms-flex: 4;
+          flex: 4;
+          text-align: left;
 
 
-}
+        }
 
-rowColumn2 {
-  width:100%;
-  -ms-flex: 6;
-  flex: 6;
-  text-align: left;
-  border: 1px outset black;
+        rowColumn2 {
+          width:100%;
+          -ms-flex: 6;
+          flex: 6;
+          text-align: left;
+          border: 1px outset black;
 
-}
-</style>
-</head>
-<body>
+        }
+        .card {
+          margin: 1rem;
+          flex-basis: 45%;
+          padding: 1.5rem;
+          text-align: left;
+          color: inherit;
+          text-decoration: none;
+          border: 1px solid #eaeaea;
+          border-radius: 10px;
+          transition: color 0.15s ease, border-color 0.15s ease;
+        }
 
-<div class="mainHeader">
-  <h1>Angelaine T. Delos Santos</h1>
-  <b>Computer Engineer</b>
-  <p> As a Computer Engineer my ultimate goal is to learn and and widen my knowledge.
-    <br> My greatest strength is that I am adaptive and flexible. </p>
-</div>
+        .card:hover,
+        .card:focus,
+        .card:active {
+          color: #0070f3;
+          border-color: #0070f3;
+        }
 
+        .card h3 {
+          margin: 0 0 1rem 0;
+          font-size: 1.5rem;
+        }
 
+        .card p {
+          margin: 0;
+          font-size: 1.25rem;
+          line-height: 1.5;
+        }
 
-<div class="sectionDiv">
-
-<!Table personal info>
-  <rowColumn1>
-    <h3>Personal Information</h3>
-    <b>Address</b>
-      <p>Villa Sto. Domingo Mexico, Pampanga</p>
-      <b>Phone</b>
-      <p>09164572394</p>
-      <b>Email</b>
-      <p>angelainedelossantos@gmail.com</p>
-  </rowColumn1>
-  
-<!Table Experience>  
-   <rowColumn2>
-    <h3>Experience</h3>
-     <p><b>2022 - </b> IT Technical Support/Assistant
-       <br> <center> Department of Environment and Natural Resources
-       <br>Region III, DMGC
-       <br>•  Setting up of Desktop Computers and/or Laptops 
-       <br>•  Reformatting
-       <br>•  Setting up Network by crimping UTP cable 
-       <br>•  Fixing time issues on devices by changing CMOS battery
-       <br>•  System Inventory
-       </p> </center>
-  </rowColumn2>
-</div>
-
-<div class="sectionDiv">
-<!Table Skills>
-  <rowColumn1>
-    <h3>Skills</h3>
-      <p>• Effective communication <br>
-       • Responsibility <br><br>• Creativity <br><br> • Problem-solving
-        <br><br> • Adaptability <br><br> • Critical Thinking <br><br> 
-        •Public Speaking <br><br> •Teamwork Skills </p>
-  </rowColumn1>
-
-<!Table Educ>
-   <rowColumn2>
-    <h3>Education</h3>
-       <p> 2019-present - Bachelor of Science in 
-         Computer Engineering
-         <br> <center> University of the Assumption </center></p>
-
-       <p> 2017-2019 - Senior High School
-         <br> <center> University of the Assumption </center></p>
-
-       <p> 2013-2017- Junior High School
-         <br> <center> Saint Mary’s Angels College of Pampanga </center></p>
-
-       <p> 2006-2013- Elementary
-         <br> <center> San Fernando Elementary School </center></p>   
-  </rowColumn2>
-</div>
-
-<div class="sectionDiv">
-<!Table software>
-  <rowColumn1>
-    <h3>Software</h3>
-      <p>• Microsoft &nbsp⚫⚫⚫⚫⚪  Very Good<br><br>
-        • C++ &nbsp⚫⚫⚫⚪⚪ Good<br><br>• Python &nbsp⚫⚫⚫⚪⚪ Good
-        <br><br> • JavaScript &nbsp⚫⚫⚪⚪⚪ Average
-        <br><br> • HTML &nbsp⚫⚫⚪⚪⚪ Average </p>
-  </rowColumn1>
-
-<!Table certifications>
-   <rowColumn2>
-    <h3>Certifications</h3>
-       <p> <b>2022</b> <br><br>
-         CISCO Certification <br><br> <b>December 2022</b> <br><br>
-         Microsoft Certification <br><br> <b>2023</b> <br>
-         Javascript Certification<br> 
-       </p>
-  </rowColumn2>
-</div>
-
-<div class="sectionDiv">
-<!Table language>
-  <rowColumn1>
-    <h3>Language</h3>
-      <p>English &nbsp⚫⚫⚫⚫⚪ B2 Intermediate<br><br>
-            Filipino &nbsp⚫⚫⚫⚪⚪ Intermediate </p>
-  </rowColumn1>
-
-<!Table Interests>
-   <rowColumn2>
-    <h3>Interests</h3>
-      <p>• Volunteer Work/Community Involvement <br>• Reading <br>• Gaming</p>
-  </rowColumn2>
-</div>
+        .logo {
+          height: 1em;
+        }
 
         @media (max-width: 600px) {
           .grid {
