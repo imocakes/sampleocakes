@@ -2,11 +2,11 @@ import Head from 'next/head'
 
 export default function Home() {
   return (
-    <div className="container">
+    <div className="mainHeader">
       <Head>
         <title>Resume</title>
         <h1>Angelaine T. Delos Santos</h1>
-        <p>Computer Engineer</p>
+        <h3>Computer Engineer</h3>
         <p> As a Computer Engineer my ultimate goal is to learn and and widen my knowledge.
            My greatest strength is that I am adaptive and flexible. 
            </p>
@@ -20,24 +20,24 @@ export default function Home() {
             <h3>Personal Information</h3>
 
             <b>Address</b>
-              <p>Villa Sto. Domingo Mexico, Pampanga
-              <b>Phone</b>
-              09164572394
-              <b>Email</b>
-              angelainedelossantos@gmail.com</p>
+              <p>Villa Sto. Domingo Mexico, Pampanga</p>
+              <p><b>Phone</b></p>
+              <p>09164572394</p>
+              <p><b>Email</b></p>
+              <p>angelainedelossantos@gmail.com</p>
           </rowColumn1>
           
 
            <rowColumn2>
             <h3>Experience</h3>
-             <p>2022 - IT Technical Support/Assistant
-                Department of Environment and Natural Resources
-               \n Region III, DMGC
-               \n•  Setting up of Desktop Computers and/or Laptops 
-               \n•  Reformatting
-               \n•  Setting up Network by crimping UTP cable 
-               \n•  Fixing time issues on devices by changing CMOS battery
-               \n•  System Inventory
+             <p>2022 - IT Technical Support/Assistant</p>
+                <p>Department of Environment and Natural Resources</p>
+               <p>Region III, DMGC</p>
+               <p>•  Setting up of Desktop Computers and/or Laptops </p>
+               <p>•  Reformatting</p>
+               <p>•  Setting up Network by crimping UTP cable </p>
+               <p>•  Fixing time issues on devices by changing CMOS battery</p>
+               <p>•  System Inventory
                </p>
           </rowColumn2>
         </div>
@@ -75,9 +75,12 @@ export default function Home() {
       </footer>
 
       <style jsx>{`
+        .mainHeader {
+          width:100%;
+          text-align: left;
+        }
+
         .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -85,7 +88,7 @@ export default function Home() {
         }
 
         main {
-          padding: 5rem 0;
+          padding: 1rem 0;
           flex: 1;
           display: flex;
           flex-direction: column;
